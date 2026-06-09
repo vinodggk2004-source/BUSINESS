@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chillup Beverage | Refresh Your Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Chillup<span>Beverage</span></a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="cart-icon" id="cartToggle">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Basket</h3>
+            <i class="fas fa-times close-cart" id="cartClose"></i>
+        </div>
+        <div class="cart-items" id="cartItems">
+            </div>
+        <div class="cart-summary">
+            <div class="summary-row"><span>Subtotal:</span><span id="cartSubtotal">$0.00</span></div>
+            <div class="summary-row"><span>Tax (10%):</span><span id="cartTax">$0.00</span></div>
+            <div class="summary-row total"><span>Total:</span><span id="cartTotal">$0.00</span></div>
+            <a href="#checkout" class="btn btn-primary btn-block" id="checkoutBtn">Proceed to Checkout</a>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Refresh Your Day with Chillup Beverage</h1>
+                <p>Premium fruit drinks crafted for every moment.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#gallery" class="btn btn-secondary">Explore Drinks</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="section padding-y">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Drinks</h2>
+                    <p>Handcrafted freshness poured into every single bottle.</p>
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="fruit">Fruity</button>
+                        <button class="filter-btn" data-filter="exotic">Exotic & Wellness</button>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section padding-y">
+            <div class="container about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80" alt="Fresh Ingredients">
+                </div>
+                <div class="about-text">
+                    <h2>Our Craft, Your Refreshment</h2>
+                    <p>Chillup Beverage is dedicated to creating high-quality drinks made from carefully selected ingredients. Our mission is to deliver refreshing experiences that bring joy to every customer.</p>
+                    <p>We source our fruits from sustainable, sun-drenched orchards to guarantee that every sip tastes just like nature intended. No artificial shortcuts—just pure, vibrant hydration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section padding-y bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Vibrant Moments</h2>
+                    <p>A glimpse into the colorful, refreshing world of Chillup.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Gallery Drink 1">
+                        <div class="gallery-overlay"><span>Pure Citrus</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=600&q=80" alt="Gallery Drink 2">
+                        <div class="gallery-overlay"><span>Berry Infusion</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Gallery Drink 3">
+                        <div class="gallery-overlay"><span>Summer Spark</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80" alt="Gallery Drink 4">
+                        <div class="gallery-overlay"><span>Tropical Bliss</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout" class="section padding-y">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complete Your Order</h2>
+                    <p>Secure checkout system.</p>
+                </div>
+                <div class="checkout-grid">
+                    <div class="checkout-form-container">
+                        <form id="checkoutForm" novalidate>
+                            <h3><i class="fas fa-truck"></i> Delivery Information</h3>
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" required placeholder="John Doe">
+                                <span class="error-msg">Please enter your full name.</span>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" required placeholder="john@example.com">
+                                    <span class="error-msg">Enter a valid email address.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" required placeholder="123-456-7890">
+                                    <span class="error-msg">Enter your phone number.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Delivery Address</label>
+                                <input type="text" id="address" required placeholder="123 Main Street">
+                                <span class="error-msg">Please provide your delivery address.</span>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" required placeholder="New York">
+                                    <span class="error-msg">Required.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Postal Code</label>
+                                    <input type="text" id="postalCode" required placeholder="10001">
+                                    <span class="error-msg">Required.</span>
+                                </div>
+                            </div>
+
+                            <h3 class="margin-t"><i class="fas fa-credit-card"></i> Payment Method</h3>
+                            <div class="payment-methods">
+                                <label class="method-option">
+                                    <input type="radio" name="paymentMethod" value="credit" checked>
+                                    <span>Credit Card</span>
+                                </label>
+                                <label class="method-option">
+                                    <input type="radio" name="paymentMethod" value="debit">
+                                    <span>Debit Card</span>
+                                </label>
+                                <label class="method-option">
+                                    <input type="radio" name="paymentMethod" value="paypal">
+                                    <span>PayPal</span>
+                                </label>
+                                <label class="method-option">
+                                    <input type="radio" name="paymentMethod" value="cod">
+                                    <span>Cash on Delivery</span>
+                                </label>
+                            </div>
+
+                            <div id="creditCardFields" class="credit-card-fields">
+                                <div class="form-group">
+                                    <label for="cardName">Cardholder Name</label>
+                                    <input type="text" id="cardName" placeholder="John Doe">
+                                    <span class="error-msg">Enter cardholder's name.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1111-2222-3333-4444" maxlength="19">
+                                    <span class="error-msg">Enter a valid 16-digit card number.</span>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry">Expiry Date</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                                        <span class="error-msg">Use MM/YY.</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="password" id="cvv" placeholder="123" maxlength="4">
+                                        <span class="error-msg">Required.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-accent btn-block margin-t">Place Order</button>
+                        </form>
+                    </div>
+
+                    <div class="checkout-summary-container">
+                        <h3>Order Summary</h3>
+                        <div id="checkoutSummaryItems">
+                            <p class="empty-msg">Your cart is empty.</p>
+                        </div>
+                        <div class="checkout-totals">
+                            <div class="summary-row"><span>Subtotal:</span><span id="summarySubtotal">$0.00</span></div>
+                            <div class="summary-row"><span>Tax (10%):</span><span id="summaryTax">$0.00</span></div>
+                            <div class="summary-row total"><span>Total Summary:</span><span id="summaryTotal">$0.00</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section padding-y bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Fans Say</h2>
+                    <p>Real feedback from everyday drink enthusiasts.</p>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-user">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Sarah J.">
+                            <div>
+                                <h4>Sarah J.</h4>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <p class="review-text">"The Mango Chill is incredible. It tastes exactly like pure fresh mango without that artificial sugary finish. Highly addicted!"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-user">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus K.">
+                            <div>
+                                <h4>Marcus K.</h4>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Berry Blast gives me the immediate midday lift I need. Crisp packaging, clean ingredients, super-fast regional shipping."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section padding-y">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions about retail distribution, wholesale ordering, or our ingredients? Reach out to us directly!</p>
+                    <div class="info-item"><i class="fas fa-phone"></i> <span>+1 (555) 765-4321</span></div>
+                    <div class="info-item"><i class="fas fa-envelope"></i> <span>hello@chillupbeverage.com</span></div>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span>789 Refreshment Blvd, Suite 100, Flavor City</span></div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+                    <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+                    <div class="form-group"><textarea rows="5" placeholder="Your Message" required></textarea></div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="logo text-white">Chillup<span>Beverage</span></a>
+                <p class="margin-t">Crafting clean, premium hydration experiences tailored perfectly for every vibrant lifestyle step.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#checkout">Checkout</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Newsletter</h4>
+                <p>Subscribe to stay updated on seasonal flavors and discount offers.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Chillup Beverage Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle modal-icon"></i>
+            <h2>Order Placed!</h2>
+            <p>Thank you for choosing Chillup Beverage. Your order has been received successfully.</p>
+            <button class="btn btn-primary" id="closeModalBtn">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
